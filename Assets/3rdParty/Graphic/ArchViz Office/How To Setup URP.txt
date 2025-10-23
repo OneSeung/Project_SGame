@@ -1,0 +1,9 @@
+Just install Post Processing and URP Packages in to you project:
+
+Window/Package Manager/Post Processing
+
+Window/Package Manager/Universal RP
+
+Than go to - Edit/Project Setings/Graphics and in "Scriptable Render Pipeline Settings" choose URP Profile from project folder.
+
+You can find post processing settings in "Post FX Profile" that included in project folder.
