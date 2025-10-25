@@ -1,0 +1,11 @@
+{
+    "Hp": 5,
+    "WalkSpeed": 5.0,
+    "RunSpeed": 10.0,
+    "StaminaMax": 100.0,
+    "StaminaMinus": 1.0,
+    "StaminaPlus": 10.0,
+    "StaminaPlusDelay": 5.0,
+    "MentalityRange": 5.0,
+    "MentalityDebuff": 49
+}

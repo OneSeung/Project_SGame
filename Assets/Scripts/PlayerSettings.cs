@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.IO;
 
 public class PlayerSettings
 {
@@ -13,6 +14,7 @@ public class PlayerSettings
         }
     }
 
+    // Hp
     public int Hp = 5;
 
     // Move
@@ -26,10 +28,40 @@ public class PlayerSettings
     public float StaminaPlusDelay = 5.0f;
 
     // Mentality
+    public float Mentality = 100.0f;
     public float MentalityRange = 5.0f;
     public int MentalityDebuff = 49;
 
-    private PlayerSettings() { }
+    private PlayerSettings()
+    {
+        _LoadFromJson();
+    }
+
+    private void _LoadFromJson()
+    {
+        string path = Path.Combine(Application.streamingAssetsPath, "PlayerSettings.json");
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            JsonUtility.FromJsonOverwrite(json, this);
+            Debug.Log("PlayerSettings loaded from JSON.");
+        }
+        else
+        {
+            Debug.Log("PlayerSettings.json not found. Creating default JSON.");
+            _SaveToJson(path);
+        }
+    }
+
+    private void _SaveToJson(string path)
+    {
+        string json = JsonUtility.ToJson(this, true);
+        Directory.CreateDirectory(Path.GetDirectoryName(path));
+        File.WriteAllText(path, json);
+        Debug.Log("PlayerSettings.json created with default values.");
+    }
 }
+
 
 

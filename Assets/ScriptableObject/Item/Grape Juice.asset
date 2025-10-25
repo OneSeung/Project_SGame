@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee06c8e4607ba504eb308908df64e5bd, type: 3}
+  m_Name: Grape Juice
+  m_EditorClassIdentifier: 
+  ItemName: Grape Juice
+  Material: {fileID: 2100000, guid: 425c5b0699bb4f84291f92c69b0380bf, type: 2}
+  Icon: {fileID: 21300000, guid: a2fff9382c36a064abea7b2714cc4ab1, type: 3}
+  Duration: 30
